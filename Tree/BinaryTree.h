@@ -6,9 +6,14 @@
 //  Copyright (c) 2015年 gao. All rights reserved.
 //
 
-#ifndef __Data_Structure__BinaryTree__
-#define __Data_Structure__BinaryTree__
+#include <iostream>
 
-#include <stdio.h>
+struct TreeNode{
+    char val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
 
-#endif /* defined(__Data_Structure__BinaryTree__) */
+void CreateBiTree(TreeNode* &T);
+void PreOrderTraverse(TreeNode *T);

@@ -7,25 +7,29 @@
 //
 
 #include <iostream>
-#include "singleList.h"
+#include "SingleList.h"
+#include "BinaryTree.h"
 using std::cin;using std::cout; using std::endl;
 
-
+void getList(ListNode *head, int n, int times){
+    head->next = NULL;
+    ListNode *tmp = head;
+    for (int i = 1; i<n; i++) {
+        for (int j=0; j<times; j++) {
+            ListNode *newNode = new ListNode(i);
+            tmp->next = newNode;
+            tmp = newNode;
+        }
+    }
+    tmp->next = NULL;
+}
 
 
 
 int main(int argc, const char * argv[]) {
+    TreeNode *BiTree;
+    CreateBiTree(BiTree);
+    PreOrderTraverse(BiTree);
     
-    Node *head;             //创建头指针
-    head = new Node;        //创建头结点
-    
-    CreateListReverse(head, 10);
-    Node *p = head->next;
-    
-    while (p) {
-        cout<<p->data<<", ";
-        p = p->next;
-    }
     return 0;
-     
 }

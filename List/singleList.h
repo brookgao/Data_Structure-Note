@@ -6,14 +6,16 @@
 //  Copyright (c) 2015年 gao. All rights reserved.
 //
 
-#include <stdio.h>
-struct Node{
-    int data;
-    Node *next;
+#include <iostream>
+
+struct ListNode{
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
 };
 
-void ClearList(Node *head);
-void CreateListReverse(Node *head, int n);
-void CreateList(Node *head, int n);
+void ClearList(ListNode *head);
+void CreateListReverse(ListNode *head, int n);
+void CreateList(ListNode *head, int n);
 
 
