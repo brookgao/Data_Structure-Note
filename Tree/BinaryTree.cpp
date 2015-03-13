@@ -8,7 +8,6 @@
 
 #include "BinaryTree.h"
 
-using std::cin; using std::cout; using std::endl;
 void CreateBiTree(TreeNode* &T){
     char ch;
     cin>>ch;
@@ -20,6 +19,49 @@ void CreateBiTree(TreeNode* &T){
         CreateBiTree(T->right);
     }
 }
+
+void DepthFirstSearch(TreeNode *T){                 //深度优先,非递归
+    stack<TreeNode*> nodeStack;
+    nodeStack.push(T);
+    TreeNode *root;
+    while(!nodeStack.empty()){
+        root = nodeStack.top();
+        cout<<root->val<<", ";
+        nodeStack.pop();
+        if (root->right)
+            nodeStack.push(root->right);
+        if (root->left)
+            nodeStack.push(root->left);
+    }
+}
+
+void BreathFirstSearch(TreeNode *T){                //广度优先
+    queue<TreeNode*> nodeQueue;
+    nodeQueue.push(T);
+    TreeNode *root;
+    while (!nodeQueue.empty()) {
+        root = nodeQueue.front();
+        cout<<root->val<<", ";
+        nodeQueue.pop();
+        if (root->left)
+            nodeQueue.push(root->left);
+        
+        if (root->right)
+            nodeQueue.push(root->right);
+    }
+    
+}
+
+int MaxDepth(TreeNode *T){         //最大深度
+    int depth = 0;
+    if (T) {
+        int Ldepth = MaxDepth(T->left);
+        int Rdepth = MaxDepth(T->right);
+        depth = Ldepth>=Rdepth?Ldepth+1:Rdepth+1;
+    }
+    return depth;
+}
+
 
 void PreOrderTraverse(TreeNode *T){   //前序
     if (T == NULL)
@@ -47,5 +89,5 @@ void PostOrderTraverse(TreeNode *T){   //后序
     cout<<T->val<<", ";
 }
 
-void 
+
 

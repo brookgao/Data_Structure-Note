@@ -7,6 +7,10 @@
 //
 
 #include <iostream>
+#include <stack>
+#include <queue>
+using std::cin; using std::cout; using std::endl;
+using std::stack; using std::queue;
 
 struct TreeNode{
     char val;
@@ -17,3 +21,9 @@ struct TreeNode{
 
 void CreateBiTree(TreeNode* &T);
 void PreOrderTraverse(TreeNode *T);
+void InOrderTraverse(TreeNode *T);
+void PostOrderTraverse(TreeNode *T);
+
+void DepthFirstSearch(TreeNode *T);
+void BreathFirstSearch(TreeNode *T);
+int MaxDepth(TreeNode *T);
