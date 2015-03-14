@@ -6,9 +6,8 @@
 //  Copyright (c) 2015年 gao. All rights reserved.
 //
 
-#include <iostream>
-#include <stack>
-#include <queue>
+#include "../Header.h"
+
 using std::cin; using std::cout; using std::endl;
 using std::stack; using std::queue;
 

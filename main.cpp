@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 gao. All rights reserved.
 //
 
-#include <iostream>
-#include <stack>
+#include "Header.h"
 #include "SingleList.h"
 #include "BinaryTree.h"
+#include "Heap.h"
 
 
 void getList(ListNode *head, int n, int times){
