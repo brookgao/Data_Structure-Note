@@ -9,3 +9,5 @@
 
 #include "../../Header.h"
 
+vector<int> h;
+int n;

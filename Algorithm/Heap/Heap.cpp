@@ -7,3 +7,16 @@
 //
 
 #include "Heap.h"
+
+
+void swap(int x, int y){
+    int t;
+    t = h[x];
+    h[x] = h[y];
+    h[y] = t;
+}
+
+
+void siftdown(int i){
+    
+}
