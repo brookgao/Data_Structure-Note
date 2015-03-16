@@ -11,9 +11,12 @@
 #include "BinaryTree.h"
 #include "Heap.h"
 
-
-
 int main(int argc, const char * argv[]) {
-   
+    MyHeap Heap;
+    Heap.creatHeap();
+    Heap.print();
+    cout<<endl;
+    Heap.heapsort();
+    Heap.print();
     return 0;
 }
