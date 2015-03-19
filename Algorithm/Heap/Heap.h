@@ -7,7 +7,7 @@
 //
 
 
-#include "../../Header.h"
+#include "Header.h"
 
 class MyHeap{
 public:
@@ -68,10 +68,10 @@ void MyHeap::siftdown(int i){
     int t=i;
     int flag=0;
     
-    while (i*2<=num&&flag==0) {
+    while (i*2<=num&&flag==0) {  //判断有无左子树
         if(heap[i]>heap[i*2])
             t = 2*i;
-        if(i*2+1<=num){
+        if(i*2+1<=num){     //判断有无右子树
             if(heap[t]>heap[2*i+1])
                 t = 2*i+1;
         }

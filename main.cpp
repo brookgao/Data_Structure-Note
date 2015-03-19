@@ -10,8 +10,15 @@
 #include "SingleList.h"
 #include "BinaryTree.h"
 #include "Heap.h"
+#include "sort.h"
 
 int main(int argc, const char * argv[]) {
+    int a[] = {5,3,4,6,2};
+    ShellSort(a, 5);
+    for (auto e:a) {
+        cout<<e<<", ";
+    }
+    
     MyHeap Heap;
     Heap.creatHeap();
     Heap.print();
