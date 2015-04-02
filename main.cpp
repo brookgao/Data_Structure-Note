@@ -13,17 +13,23 @@
 #include "sort.h"
 
 int main(int argc, const char * argv[]) {
+
     int a[] = {5,3,4,6,2};
-    ShellSort(a, 5);
-    for (auto e:a) {
-        cout<<e<<", ";
-    }
     
+    for (auto e:a) {
+        cout<<e<<",";
+    }
+    MergeSort(a, 0, 4);
+    cout<<endl;
+    for (auto e:a) {
+        cout<<e<<",";
+    }
+    /*
     MyHeap Heap;
     Heap.creatHeap();
     Heap.print();
     cout<<endl;
     Heap.heapsort();
-    Heap.print();
+    Heap.print();*/
     return 0;
-}
+} 

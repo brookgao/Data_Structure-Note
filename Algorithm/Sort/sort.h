@@ -17,4 +17,5 @@ void QuickSort(int a[], int left, int right);
 void SelectSort(int a[], int n);
 void InsertSort(int a[], int n);
 void ShellSort(int a[], int n);
+void MergeSort(int a[],int first, int last);
 #endif

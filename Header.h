@@ -14,9 +14,11 @@
 #include <queue>
 #include <vector>
 #include <algorithm>
+#include <string>
 
 using std::cin; using std::cout; using std::endl;
 using std::stack; using std::queue;
 using std::vector;
+using std::string;
 
 #endif

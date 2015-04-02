@@ -86,5 +86,44 @@ void ShellSort(int a[], int n){    //shell排序
     }
 }
 
+///归并排序
+void merge(int a[], int first,int mid, int last){   //归并排序
+    std::queue<int> tmp;
+    int p1 = first;
+    int p2 = mid+1;
+    while (p1<=mid&&p2<=last) {
+        if (a[p1]<a[p2]) {
+            tmp.push(a[p1]);
+            p1++;
+        }else{
+            tmp.push(a[p2]);
+            p2++;
+        }
+    }
+    while(p1<=mid){
+        tmp.push(a[p1]);
+        p1++;
+    }
+    
+    while(p2<=last){
+        tmp.push(a[p2]);
+        p2++;
+    }
+    for (int i = first; i<=last; i++) {
+        a[i] = tmp.front();
+        tmp.pop();
+    }
+    
+}
+
+void MergeSort(int a[], int first, int last){
+    if (first<last) {
+        int mid = (first+last)/2;
+        MergeSort(a, first, mid);
+        MergeSort(a, mid+1, last);
+        merge(a,first,mid,last);
+    }
+}
+
 
 
